@@ -23,15 +23,19 @@ for (let lifeEvent of lifeEvents) {
   console.log(lifeEvent);
 }
 
-let randomNumber = Math.floor(Math.random() * 10 + 1);
+let counter = 0;
 
 while (true) {
+  let randomNumber = Math.floor(Math.random() * 10 + 1);
+
   if (randomNumber !== 5) {
+    counter++;
     console.log("randomNumber !== 5");
-    break;
   } else {
+    counter++;
     console.log(
-      "5 === 5. it took 4 iterations to randomly generate the number 5"
+      `5 == 5. It took ${counter} iterations to randomly generate the number 5`
     );
+    break;
   }
 }
